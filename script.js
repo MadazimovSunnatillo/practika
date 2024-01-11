@@ -48,13 +48,15 @@ const personalMoviesDB = {
       }
     }
   },
+
   showMyDb: function (hidden) {
     if (!hidden) {
       console.log(personalMoviesDB);
     }
   },
+
   writeYourGenres: function () {
-    for (let i = 1; i <= 3; i++) {
+    for (let i = 1; i < 3; i++) {
       let genre = `Ваш любимый жанр под номером ${i}`;
 
       if (genre === "" || genre === null) {
@@ -64,7 +66,7 @@ const personalMoviesDB = {
       }
     }
     personalMoviesDB.genres.forEach((item, i) => {
-      console.log(`Любимый жанр ${i + 1}- это`);
+      console.log(`Любимый жанр ${i + 1}- это ${item}`);
     });
   },
   toggleVisibleMyDB: function () {
